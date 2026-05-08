@@ -1,0 +1,90 @@
+:root {
+/* set var for mobile */
+    --body-color: #292929;
+}
+
+/* Make box-sing default to border-box */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Basic error checking on mandatory CSS properties */
+html:not([lang]),html[lang=""] { border-top: 20px solid red; }
+img:not([alt]),img[alt=""] { border: 5px dashed red; }
+canvas:not([role]),canvas:not([aria-label]),canvas[role=""],canvas[aria-label=""] { border: 5px dashed red; }
+
+/* Body color set to custom property. Change colour in the the :root rule */
+
+body {
+  color: var(--body-color);
+  background-color: #f4f4ea;
+}
+
+/* Centre everything in the main element */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  max-width: 80ch;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.image-left {
+  float: left;
+  margin: 0 1.5em 1em 0;
+  width: 40%;
+}
+
+.image-right {
+  float: right;
+  margin: 0 0 1em 1.5em;
+  width: 40%;
+}
+
+.image-transparent {
+  float: left;
+  margin: 0 1.5em 1em 0;
+  width: 40%;
+  shape-outside: ellipse(50% 50% at 50% 50%);
+}
+
+.image-transparent {
+  float: left;
+  margin: 0 1.5em 1em 0;
+  width: 40%;
+  shape-outside: ellipse(50% 50% at 50% 50%);
+}
+
+.image-star {
+  float: right;
+  margin: 0 0 1em 1.5em;
+  width: 40%;
+  /* shape-outside: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cpath d='M50 10 L61 35 L90 35 L67 52 L78 80 L50 65 L22 80 L33 52 L10 35 L39 35 Z' fill='black'/%3e%3c/svg%3e");*/
+  shape-outside: url(star-svgrepo.svg);
+  shape-margin: 10px; /* Adjust the margin to control the space between the shape and the text */
+}
+
+.image-star-polygon {
+  float: right;
+  margin: 0 0 1em 1.5em;
+  width: 40%;
+  /* shape-outside: polygon(0% 20%, 60% 20%, 60.66% 0.76%, 102% 36.29%, 60.34% 63.04%, 60.67% 44.19%, 0.67% 44.58%); /* Arrrow */
+  shape-outside: polygon(7.12% 20.33%, 41.87% 20.33%, 64.55% -0.57%, 102% 36.29%, 70.89% 96.38%, 44.47% 81.99%, 7.89% 88.74%, 23.98% 49.9%);
+  shape-margin: 5px;
+}
